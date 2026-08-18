@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altana Cliffside Villas - Santorini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">Altana Cliffside Villas</div>
+            <nav class="nav">
+                <a href="#home">Home</a>
+                <a href="#quartos">Quartos</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#comodidades">Comodidades</a>
+                <a href="#avaliacoes">Avaliações</a>
+                <a href="#reserva">Reservar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Altana Cliffside Villas</h1>
+            <p>Localização Excelente - 9.8/10 (nota de 141 avaliações)</p>
+            <p class="hero-subtitle">Villas de Luxo com Vista Espetacular da Caldeira em Imerovigli, Santorini</p>
+            <button class="btn btn-primary" onclick="scrollToReserva()">Reservar Agora</button>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder">[IMAGEM PRINCIPAL]</div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section class="localizacao">
+        <div class="container">
+            <h2>Localização Premium</h2>
+            <div class="localizacao-content">
+                <div class="localizacao-text">
+                    <h3>Imerovigli, Santorini - Grécia</h3>
+                    <p><strong>Endereço:</strong> Caldera, Imerovigli, 84700, Grécia</p>
+                    <ul>
+                        <li>Aeroporto Thira: 5 km</li>
+                        <li>Fira: 20 minutos a pé</li>
+                        <li>Oia: 15 minutos de carro</li>
+                        <li>Exo Gialos Beach: 4.3 km</li>
+                    </ul>
+                </div>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.8979649845657!2d25.431!3d36.417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1499f5b5b5b5b5b5%3A0x0!2sImerovigli%2C%20Santorini!5e0!3m2!1spt-BR!2sgr!4v1234567890" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUARTOS -->
+    <section id="quartos" class="quartos">
+        <div class="container">
+            <h2>Tipos de Quartos</h2>
+            <div class="quartos-grid">
+                <div class="quarto-card">
+                    <div class="quarto-image">[IMAGEM]</div>
+                    <h3>Villa Caverna Premium</h3>
+                    <p>Piscina de Imersão + Vista da Caldeira</p>
+                    <ul>
+                        <li>1 Cama de Casal Grande</li>
+                        <li>1 Sofá-cama</li>
+                        <li>Piscina Privativa</li>
+                        <li>Vista Espetacular</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="abrirReserva('Villa Caverna Premium')">Visualizar Preços</button>
+                </div>
+                <div class="quarto-card">
+                    <div class="quarto-image">[IMAGEM]</div>
+                    <h3>Quarto Duplo</h3>
+                    <p>Vista da Caldeira</p>
+                    <ul>
+                        <li>1 Cama de Casal</li>
+                        <li>Varanda com Vista</li>
+                        <li>Banheiro Privativo</li>
+                        <li>Wi-Fi Gratuito</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="abrirReserva('Quarto Duplo')">Visualizar Preços</button>
+                </div>
+                <div class="quarto-card">
+                    <div class="quarto-image">[IMAGEM]</div>
+                    <h3>Villa Caverna Superior</h3>
+                    <p>Piscina + Múltiplos Espaços</p>
+                    <ul>
+                        <li>2 Camas de Casal</li>
+                        <li>2 Sofás-cama</li>
+                        <li>Piscina de Imersão</li>
+                        <li>Espaço Amplo</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="abrirReserva('Villa Caverna Superior')">Visualizar Preços</button>
+                </div>
+                <div class="quarto-card">
+                    <div class="quarto-image">[IMAGEM]</div>
+                    <h3>Suite Júnior Caverna</h3>
+                    <p>Piscina de Imersão ao Ar Livre</p>
+                    <ul>
+                        <li>1 Cama de Casal Grande</li>
+                        <li>Piscina Privativa</li>
+                        <li>Acabamento Premium</li>
+                        <li>Serviço Concierge</li>
+                    </ul>
+                    <button class="btn btn-secondary" onclick="abrirReserva('Suite Júnior Caverna')">Visualizar Preços</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2>Galeria</h2>
+            <div class="galeria-grid">
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Paisagem Natural</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Piscina</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Cozinha</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Quarto</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Banheiro</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Sala de Estar</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Vista da Caldeira</p>
+                </div>
+                <div class="galeria-item" onclick="abrirGaleria(this)">
+                    <div class="galeria-image">[FOTO]</div>
+                    <p>Área de Refeições</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMODIDADES -->
+    <section id="comodidades" class="comodidades">
+        <div class="container">
+            <h2>Comodidades Principais</h2>
+            <div class="comodidades-grid">
+                <div class="comodidade-item">
+                    <span class="icon">Wi-Fi</span>
+                    <h3>Wi-Fi Gratuito</h3>
+                    <p>Conexão rápida em toda a propriedade</p>
+                </div>
+                <div class="comodidade-item">
+                    <span class="icon">Estacionamento</span>
+                    <h3>Estacionamento Gratuito</h3>
+                    <p>Estacionamento público próximo</p>
+                </div>
+                <div class="comodidade-item">
+                    <span class="icon">Ar-Condicionado</span>
+                    <h3>Ar-Condicionado</h3>
+                    <p>Conforto total em todos os ambientes</p>
+                </div>
+                <div class="comodidade-item">
+                    <span class="icon">Café</span>
+                    <h3>Café da Manhã</h3>
+                    <p>Continental, Vegetariano, Vegano, Glúten-free</p>
+                </div>
+                <div class="comodidade-item">
+                    <span class="icon">Yoga</span>
+                    <h3>Aulas de Yoga</h3>
+                    <p>Sessões privativas personalizadas</p>
+                </div>
+                <div class="comodidade-item">
+                    <span class="icon">Spa</span>
+                    <h3>Serviço de Spa</h3>
+                    <p>Massagem, tratamentos corporais e faciais</p>
+                </div>
+                <div class="comodidade-item">
+                    <span class="icon">Piscina</span>
+                    <h3>Piscina Privativa</h3>
+                    <p>Piscina de imersão em selecionadas villas</p>
+                </div>
+                <div class="comodidade-item">
+                    <span class="icon">Concierge</span>
+                    <h3>Serviço Concierge</h3>
+                    <p>Assistência 24/7 para todas as suas necessidades</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AVALIAÇÕES -->
+    <section id="avaliacoes" class="avaliacoes">
+        <div class="container">
+            <h2>Avaliações dos Hóspedes (9.9/10)</h2>
+            <div class="avaliacoes-stats">
+                <div class="stat">
+                    <span class="stat-value">9.9</span>
+                    <span class="stat-label">Avaliação Geral</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">10.0</span>
+                    <span class="stat-label">Funcionários</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">10.0</span>
+                    <span class="stat-label">Limpeza</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">9.8</span>
+                    <span class="stat-label">Localização</span>
+                </div>
+            </div>
+
+            <div class="avaliacoes-container">
+                <div class="avaliacao-card">
+                    <div class="avaliacao-header">
+                        <strong>Lauren</strong> <span class="pais">Reino Unido</span>
+                    </div>
+                    <p>"Tudo! Não tenho nada a apontar quanto à nossa estadia em Altana. Os funcionários foram simplesmente incríveis."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="avaliacao-card">
+                    <div class="avaliacao-header">
+                        <strong>Alannah</strong> <span class="pais">Irlanda</span>
+                    </div>
+                    <p>"Os funcionários foram extremamente prestativos e trabalharam incansavelmente para garantir que você se sentisse confortável."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="avaliacao-card">
+                    <div class="avaliacao-header">
+                        <strong>Tracey</strong> <span class="pais">Austrália</span>
+                    </div>
+                    <p>"Este lugar é deslumbrante, mais privativo do que algumas outras vilas no penhasco, limpo, confortável, bem equipado!"</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+                <div class="avaliacao-card">
+                    <div class="avaliacao-header">
+                        <strong>Sebastien</strong> <span class="pais">Suíça</span>
+                    </div>
+                    <p>"Localização incrível. Vistas incríveis. Serviço incrível, prestativo, atencioso e super simpático."</p>
+                    <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE RESERVA -->
+    <section id="reserva" class="reserva">
+        <div class="container">
+            <h2>Faça sua Reserva</h2>
+            <form class="reserva-form" onsubmit="enviarReserva(event)">
+                <div class="form-group">
+                    <label for="tipo-quarto">Tipo de Quarto:</label>
+                    <select id="tipo-quarto" required>
+                        <option value="">Selecione um quarto</option>
+                        <option value="Villa Caverna Premium">Villa Caverna Premium</option>
+                        <option value="Quarto Duplo">Quarto Duplo</option>
+                        <option value="Villa Caverna Superior">Villa Caverna Superior</option>
+                        <option value="Suite Júnior Caverna">Suite Júnior Caverna</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkin">Check-in:</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">Check-out:</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adultos">Adultos:</label>
+                        <select id="adultos" required>
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="criancas">Crianças:</label>
+                        <select id="criancas" required>
+                            <option value="0" selected>0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required placeholder="Seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required placeholder="seu@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" required placeholder="+55 (11) 99999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="pais">País:</label>
+                    <input type="text" id="pais" required placeholder="Brasil">
+                </div>
+
+                <div class="form-group">
+                    <label for="observacoes">Observações Especiais:</label>
+                    <textarea id="observacoes" placeholder="Conte-nos sobre suas preferências especiais..." rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Confirmar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Altana Cliffside Villas</h3>
+                    <p>Imerovigli, Santorini, Grécia</p>
+                    <p>Email: info@altana.gr</p>
+                    <p>Telefone: +30 2286 071500</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Rápido</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#quartos">Quartos</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#reserva">Reservar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Informações</h3>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Serviço</a></li>
+                        <li><a href="#">Cancelamento</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Siga-nos</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Altana Cliffside Villas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL GALERIA -->
+    <div id="galeraModal" class="modal">
+        <span class="close" onclick="fecharGaleria()">&times;</span>
+        <div class="modal-content">
+            <div id="modalImage" class="modal-image">[IMAGEM]</div>
+            <p id="modalCaption">Paisagem Natural</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
